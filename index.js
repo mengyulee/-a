@@ -39,6 +39,23 @@
     }, 1e3)
 }(this, document);
 
+$(function() {
+  isFirstTab();
+  $('.price-banner li').click(function() {
+    $(this).addClass('z-active').siblings().removeClass('z-active');
+    isFirstTab();
+  });
+  function isFirstTab() {
+    var firstTab = $('.price-banner li:first').hasClass('z-active');
+    if (firstTab) {
+      $('.tabs1').css('display', 'block');
+      $('.tabs2').css('display', 'none');
+    } else {
+      $('.tabs1').css('display', 'none');
+      $('.tabs2').css('display', 'block');
+    }
+  }
+});
 // function move(e) {
 //     console.log(e)
 //     const width = document.body.offsetWidth

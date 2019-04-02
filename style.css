@@ -111,26 +111,26 @@ html, body {
 .step-1 nav a:hover{
     color: #2f7ddb;
 }
-.shell-box {
+.step-1 .shell-box {
     position: absolute;
     top: 250px;
     left: 50%;
     margin-left: -620px;
     animation: shell-in 1s;
 }
-.shell-box .shell {
+.step-1 .shell-box .shell {
     position: absolute;
     top: 0;
     animation: shell 7s infinite;
 }
-.shell-box .shell span{
+.step-1 .shell-box .shell span{
     display: block;
     height: 785px;
     width: 500px;
     background: url('./img/shell.png') 50% 50% / cover;
     transform: translateZ(50px);
 }
-h2 {
+.step-1 h2 {
     position: absolute;
     left: 50%;
     margin-left: -160px;
@@ -139,10 +139,10 @@ h2 {
     animation: step-one-title-in 1.3s;
     font-size: 60px;
 }
-h2 span {
+.step-1 h2 span {
     display: block;
 }
-.link-reg {
+.step-1 .link-reg {
     display: inline-block;
     position: absolute;
     left: 50%;
@@ -160,13 +160,13 @@ h2 span {
     animation: opacity-in 3s;
     text-decoration: none;
 }
-.link-reg:hover {
+.step-1 .link-reg:hover {
     background: #FFF;
     color: #2f7ddb;
     box-shadow: 0 0 0 4px rgba(255,255,255,.8), 0 20px 20px -10px rgba(255,0,255,.1);
     transform: translateZ(180px);
 }
-.link-reg::after {
+.step-1 .link-reg::after {
     content: " ";
     background: url(./img/arrow.svg) no-repeat;
     width: 190px;
@@ -176,7 +176,7 @@ h2 span {
     top: -60px;
     pointer-events: none;
 }
-.bg{
+.step-1 .bg{
     position: absolute;
     top: 70px;
     left: 50%;
@@ -187,7 +187,7 @@ h2 span {
     pointer-events: none;
 }
 
-.hr {
+.step-1 .hr {
     position: absolute;
     top: 420px;
     left: 50%;
@@ -197,7 +197,7 @@ h2 span {
     height: 1360px;
 }
 
-.light{
+.step-1 .light{
     position: absolute;
     top: 220px;
     left: 50%;
@@ -208,27 +208,32 @@ h2 span {
     transform: translateZ(420px);
     pointer-events: none;
 }
-.step-2 .content {
-    background: white;
+.step-3 {
+  color: #fff;
+  width: 100%;
+  height: 600px;
+}
+.step-3 .content {
+    height: 30pc;
     position: relative;
+    top: -100px;
     transform: scale(.8);
     opacity: 0;
     text-align: center;
     transition: opacity .3s ease,transform .3s ease;
 }
-html[step="2"] .step-2 .content {
+html[step="3"] .step-3 .content {
     -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1
 }
 
-html[step="2"] .step-2 .shell-2 {
+html[step="3"] .step-3 .shell-2 {
     opacity: 1;
     -webkit-transform: translateX(0);
     transform: translateX(0)
 }
-.content .note {
-    color: var(--bg);
+.step-3 .content .note {
     text-align: center;
     box-sizing: border-box;
     padding: 0 2em;
@@ -236,53 +241,43 @@ html[step="2"] .step-2 .shell-2 {
     line-height: 32px;
     width: 1120px;
     margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    margin-left: -560px;
-    margin-top: -120px;
 }
-.content .note p {
+.step-3 .content .note p {
     padding: 10px 0;
 }
-.content .note p.u-right{
+.step-3 .content .note p.u-right{
     display: flex;
     justify-content: center; 
 }
-.content .note p.u-center{
+.step-3 .content .note p.u-center{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.content .note p.u-right>span{
+.step-3 .content .note p.u-right>span{
     display: table-cell;
     width: 150px;
 }
-.content .note p>span.u-right:first-child{
+.step-3 .content .note p>span.u-right:first-child{
     text-align: right;
 }
-.u-h {
+.step-3 .u-h {
     margin: 0;
-    color: var(--bg);
-    background: white;
     text-align: center;
     font-size: 60px;
     line-height: 70px;
     font-weight: 200;
     min-width: 560px;
-    position: absolute;
-    top: -200px;
-    left: 50%;
-    margin-left: -280px;
 }
-.weChat{
+.step-3 .weChat{
     display: block;
     background: url(./img/weChat.jpg) 50% 50% /cover;
     width: 100px;
     height: 100px;
 }
-.shell-2 {
+.step-3 .shell-2 {
     position: absolute;
-    top: -420px;
+    top: -10pc;
     left: 50%;
     margin-left: 170px;
     height: 300px;
@@ -296,16 +291,44 @@ html[step="2"] .step-2 .shell-2 {
     pointer-events: none;
     opacity: 0
 }
-.step-3 {
+
+.step-2 {
     display: block;
     background: url(./img/step-2.svg) top center no-repeat #1F2738;
-    background-size: 4000px 600px;
-    padding-top: 400px;
+    background-size:1000% 100%;
+    /* padding-top: 400px; */
     color: #FFF;
-    padding-bottom: 50px;
+    height: 800px;
 }
-.step-3 p {
+.step-3  p.footer {
+    margin-bottom: 30px;
     text-align: right;
     margin-right: 100px;
     font-size: 1.4rem;
+}
+.download-wrapper {
+  text-align: center;
+  margin-top: 200px;
+}
+.download-wrapper .link-btn {
+  display: inline-block;
+  padding: 0 .6em;
+  margin: 0 20px;
+  font-size: 26px;
+  line-height: 60px;
+  font-weight: 400;
+  color: white;
+  box-shadow: 0 0 0 2px rgba(255,255,255,.8), 0 0 0 0 transparent;
+  border-radius: .3em;
+  transform: translateZ(150px);
+  transition: transform .3s ease,background .3s ease,color .3s ease;
+  animation: opacity-in 3s;
+  text-decoration: none;
+}
+
+.step-1 .link-btn:hover {
+  background: #FFF;
+  color: #2f7ddb;
+  box-shadow: 0 0 0 4px rgba(255,255,255,.8), 0 20px 20px -10px rgba(255,0,255,.1);
+  transform: translateZ(180px);
 }

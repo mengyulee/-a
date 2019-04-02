@@ -1,0 +1,132 @@
+@keyframes gaoji {
+  100% {
+    color: #fff;
+    background-color: #317ef3;
+  }
+}
+html[step="2"] .step-2 .price-section {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1
+}
+
+html[step="2"] .step-2 {
+  -webkit-transform: translateX(0);
+  transform: translateX(0)
+}
+.main-header-menus a:nth-child(2) {
+  color: #317ef3;
+}
+.price-section {
+  opacity: 0;
+  text-align: center;
+  color: #000;
+  position: relative;
+  top: -14pc;
+  transition: opacity .3s ease,transform .3s ease;
+}
+.price-banner li {
+  list-style: none;
+  display: inline-block;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  width: 163px;
+  height: 38px;
+  padding: 0px;
+  margin: 0px;
+  color: #317ef3;
+  line-height: 34px;
+}
+.price-banner li:hover {
+  animation: gaoji 0.5s linear forwards;
+  background-color: #317ef3;
+  /* border: 2px solid #317EF3; */
+  width: 163px;
+  height: 38px;
+  padding: 0px;
+  list-style-type: none;
+  margin: 0px;
+  color: #fff;
+  line-height: 34px;
+  cursor: pointer;
+}
+.z-active {
+    animation: gaoji 0.5s linear forwards;
+    background-color: #317ef3;
+    border: 2px solid #317EF3!important;
+    width: 163px;
+    height: 38px;
+    padding: 0px;
+    list-style-type: none;
+    margin: 0px;
+    color: #fff;
+    line-height: 34px;
+    cursor: pointer;
+}
+h2 {
+  font-size: 36px;
+  /* margin-top: 10px; */
+  margin-bottom: 20px;
+}
+.text-muted {
+  font-size: 18px;
+  line-height: 32px;
+  color: #777;
+  margin-bottom: 18px;
+}
+.price-content {
+  height: 342px;
+  text-align: center;
+  margin-top: 3pc;
+}
+.price-tab {
+  display: inline-block;
+  width: 240px;
+  border: 1px solid #317ef3;
+  margin: 0 15px;
+  padding-bottom: 4pc;
+  border-radius: 6px;
+}
+.price-tab:hover {
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 80px #ccc;
+}
+
+.price-tab h3 {
+  border-bottom: 1px dashed #317ef3;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+.price-tab p {
+  line-height: 36px;
+}
+
+.price-tab h2 {
+  border-top: 1px dashed #317ef3;
+  padding-top: 20px;
+  font-size: 30px;
+}
+.price-tab button {
+  color: #fff;
+  background: #317ef3;
+  height: 43px;
+  width: 100px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.price-tab button:hover{
+    background: #5a8fdf
+}
+.price-tab button a {
+    display: block;
+    width: 100px;
+    height: 43px;
+    line-height: 43px;
+    text-decoration: none;
+    color: #fff;
+}
